@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  test.m
 //  XLPhotoBrowser
 //
 //  Created by Leo on 2017/10/1.
 //  Copyright © 2017年 aionyiruma. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "test.h"
 
-@interface ViewController : UIViewController
+@implementation test
 
-///jfjjffjjfjf
 @end
-
