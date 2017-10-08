@@ -1,2 +1,1 @@
-# XLPhotoBrowser
-To be continue
+## 欢迎使用
