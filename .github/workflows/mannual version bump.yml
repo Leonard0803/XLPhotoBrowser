@@ -9,8 +9,8 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: yanamura/ios-bump-version@v1
-        with:
+    - uses: yanamura/ios-bump-version@v1.7.0
+      with:
           version: ${{ github.event.inputs.version }}
 - name: update
   run: |
