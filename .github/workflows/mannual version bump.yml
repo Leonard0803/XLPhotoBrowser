@@ -1,0 +1,28 @@
+name: Manual Version Bump
+
+on:
+  workflow_dispatch:
+    inputs:
+      new_version:
+        description: 'New app version (e.g., x.x.x)'
+        required: true
+
+jobs:
+  bump_version:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set new version
+        run: |
+          new_version="${{ github.event.inputs.new_version }}"
+          plist_file="XLPhotoBrowser/Info.plist"  # Replace with the path to your Info.plist file
+          /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $new_version" "$plist_file"
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Bump version to ${{ github.event.inputs.new_version }}"
+          git push
