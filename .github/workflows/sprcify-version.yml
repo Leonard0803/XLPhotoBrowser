@@ -5,6 +5,7 @@ on:
     inputs:
       version:
         description: new app version x.x.x.
+        default: "1.0.0"
 
 jobs:
   versionup:
