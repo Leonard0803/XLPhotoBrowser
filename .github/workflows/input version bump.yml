@@ -23,4 +23,5 @@ jobs:
         run: |
           git add .
           git commit -m "bump version"
+          git pull
           git push origin HEAD
