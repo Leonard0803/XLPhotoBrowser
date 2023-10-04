@@ -3,6 +3,8 @@ on:
     inputs:
       version:
         description: new app version x.x.x.
+      buildNumber:
+        description: new app buildNumber x
 
 jobs:
   versionup:
@@ -14,6 +16,7 @@ jobs:
       - uses: yanamura/ios-bump-version@v1
         with:
           version: ${{ github.event.inputs.version }} #1234
+          build-Number: ${{ github.event.inputs.buildNumber }}
       - name: update
         run: |
           git add .
