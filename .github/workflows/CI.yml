@@ -14,8 +14,8 @@ jobs:
   test:
     runs-on: macOS-latest
     env:
-      SCHEME: URLNavigator-Package
-      CODECOV_PACKAGE_NAME: URLNavigator
+      SCHEME: XLPhotoBrowser
+      CODECOV_PACKAGE_NAME: XLPhotoBrowser
     strategy:
       matrix:
         env:
